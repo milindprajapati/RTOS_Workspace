@@ -1,0 +1,42 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+#include "FreeRTOS.h"
+#include "stm32f30x.h"
+#include "stm32f3xx_nucleo.h"
+#include "task.h"
+
+TaskHandle_t xTaskHandle1=NULL;
+TaskHandle_t xTaskHandle2=NULL;
+
+void xTask1_handler(void  *params);
+void xTask2_handler(void  *params);
+
+
+int main(void)
+{
+	RCC_DeInit();
+	SystemCoreClockUpdate();
+
+	//Create Task
+	xTaskCreate( xTask1_handler, "Task1",configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1);
+	xTaskCreate( xTask2_handler, "Task2",configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle2);
+	for(;;);
+}
+
+void xTask1_handler(void  *params)
+{
+
+}
+
+void xTask2_handler(void  *params)
+{
+
+}
