@@ -2,6 +2,7 @@ content_assist_category_order=org.eclipse.mylyn.cdt.ui.parserProposalCategory\:0
 content_assist_disabled_computers=
 content_assist_proposals_timeout=5000
 eclipse.preferences.version=1
+matchingBracketsColor=255,128,64
 sourceHoverBackgroundColor=255,255,225
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true

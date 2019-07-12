@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item value="0x20002eb0" key="Start"/>
+		<item value="0x200036af" key="End"/>
+		<item value="\D:\Udemy\RTOS\RTOS_Workspace\STM32_HelloWorld\Segger_memdump\01FreeRTOS_hw.SVdat" key="File"/>
+		<item value="rawbinary" key="SELECTED_EXPORTER"/>
+		<item value="0x8" key="Initial address"/>
+	</section>
+</section>

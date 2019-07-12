@@ -1,0 +1,23 @@
+22:58:41 **** Incremental Build of configuration Debug for project STM32_LedButton ****
+make -j8 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: STM32_LedButton.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_LedButton.elf" @"objects.list"   -lm
+Finished building target: STM32_LedButton.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "STM32_LedButton.elf" "STM32_LedButton.bin"
+arm-none-eabi-size "STM32_LedButton.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8608	   1152	  11108	  20868	   5184	STM32_LedButton.elf
+ 
+
+22:58:43 Build Finished (took 1s.494ms)
+

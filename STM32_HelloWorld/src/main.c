@@ -46,11 +46,16 @@ int main(void)
 	printf("This is Task creation Project\n");
 #endif
 */
+	DWT -> CTRL |= (1<<0);
+
 	RCC_DeInit();
 	SystemCoreClockUpdate();
 	prvSetupHardware();
 
 	printmsg("Hello World! \n");
+
+	SEGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Start();
 	//Create Task
 	xTaskCreate( vTask1_handler, "Task1",configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle1);
 	xTaskCreate( vTask2_handler, "Task2",configMINIMAL_STACK_SIZE, NULL, 2, &xTaskHandle2);

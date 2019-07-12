@@ -1,0 +1,91 @@
+21:25:09 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LEDandButton ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../src/syscalls.c
+Building file: ../src/system_stm32f30x.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
+Building file: ../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
+Invoking: MCU GCC Compiler
+Building file: ../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Building file: ../Third-Party/FreeRTOS/org/Source/croutine.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+Building file: ../Third-Party/FreeRTOS/org/Source/event_groups.c
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f30x.d" -MT"src/system_stm32f30x.o" -o "src/system_stm32f30x.o" "../src/system_stm32f30x.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.d" -MT"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" -o "Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" "../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c"
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.d" -MT"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" -o "Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" "../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.d" -MT"Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" -o "Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" "../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/croutine.d" -MT"Third-Party/FreeRTOS/org/Source/croutine.o" -o "Third-Party/FreeRTOS/org/Source/croutine.o" "../Third-Party/FreeRTOS/org/Source/croutine.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_FreeRTOS_LEDandButton\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/event_groups.d" -MT"Third-Party/FreeRTOS/org/Source/event_groups.o" -o "Third-Party/FreeRTOS/org/Source/event_groups.o" "../Third-Party/FreeRTOS/org/Source/event_groups.c"
+../src/system_stm32f30x.c: In function 'SetSysClock':
+../src/system_stm32f30x.c:287:37: warning: unused variable 'HSEStatus' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                                     ^~~~~~~~~
+../src/system_stm32f30x.c:287:17: warning: unused variable 'StartUpCounter' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                 ^~~~~~~~~~~~~~
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:62:0,
+                 from ../Third-Party/FreeRTOS/org/Source/croutine.c:28:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/portable.h:52:11: fatal error: portmacro.h: No such file or directory
+  #include "portmacro.h"
+           ^~~~~~~~~~~~~
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:62:0,
+                 from ../src/main.c:16:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/portable.h:52:11: fatal error: portmacro.h: No such file or directory
+  #include "portmacro.h"
+           ^~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:62:0,
+                 from ../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:43:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/portable.h:52:11: fatal error: portmacro.h: No such file or directory
+  #include "portmacro.h"
+           ^~~~~~~~~~~~~
+compilation terminated.
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/croutine.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/croutine.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o] Error 1
+Third-Party/FreeRTOS/org/Source/portable/MemMang/subdir.mk:18: recipe for target 'Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o' failed
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:62:0,
+                 from ../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c:33:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/portable.h:52:11: fatal error: portmacro.h: No such file or directory
+  #include "portmacro.h"
+           ^~~~~~~~~~~~~
+compilation terminated.
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:62:0,
+                 from ../Third-Party/FreeRTOS/org/Source/event_groups.c:37:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_FreeRTOS_LEDandButton/Third-Party/FreeRTOS/org/Source/include/portable.h:52:11: fatal error: portmacro.h: No such file or directory
+  #include "portmacro.h"
+Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/subdir.mk:18: recipe for target 'Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o' failed
+           ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o] Error 1
+Finished building: ../src/syscalls.c
+make: *** [Third-Party/FreeRTOS/org/Source/event_groups.o] Error 1
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/event_groups.o' failed
+ 
+Finished building: ../src/system_stm32f30x.c
+Finished building: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
+ 
+ 
+
+21:25:11 Build Finished (took 1s.173ms)
+

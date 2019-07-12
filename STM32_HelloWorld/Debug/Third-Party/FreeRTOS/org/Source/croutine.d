@@ -32,6 +32,10 @@ Third-Party/FreeRTOS/org/Source/croutine.o: \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_usart.h \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_wwdg.h \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_misc.h \
+ D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/SEGGER/SEGGER.h \
+ D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/Config/Global.h \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/FreeRTOS/org/Source/include/projdefs.h \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/FreeRTOS/org/Source/include/portable.h \
  D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/FreeRTOS/org/Source/include/deprecated_definitions.h \
@@ -104,6 +108,14 @@ D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_usa
 D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_wwdg.h:
 
 D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/StdPeriph_Driver/inc/stm32f30x_misc.h:
+
+D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+
+D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+
+D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/SEGGER/SEGGER.h:
+
+D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/SEGGER/Config/Global.h:
 
 D:/Udemy/RTOS/RTOS_Workspace/STM32_HelloWorld/Third-Party/FreeRTOS/org/Source/include/projdefs.h:
 
