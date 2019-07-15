@@ -1,0 +1,61 @@
+16:18:44 **** Incremental Build of configuration Debug for project STM32_LedBTN_TaskNotify ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedBTN_TaskNotify\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/SEGGER" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/OS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedBTN_TaskNotify\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/SEGGER" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/OS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/SEGGER/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedBTN_TaskNotify/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.d" -MT"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" -o "Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" "../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c"
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:64:47: error: expected ')' before ']' token
+  static uint8_t ucHeap[ configTOTAL_HEAP_SIZE ];
+                                               ^
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c: In function 'prvHeapInit':
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:334:46: error: expected ')' before ';' token
+ size_t xTotalHeapSize = configTOTAL_HEAP_SIZE;
+                                              ^
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:374:1: error: expected ',' or ';' before '}' token
+ }
+ ^
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:377:13: error: invalid storage class for function 'prvInsertBlockIntoFreeList'
+ static void prvInsertBlockIntoFreeList( BlockLink_t *pxBlockToInsert )
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:435:1: error: expected declaration or statement at end of input
+ }
+ ^
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:334:8: warning: unused variable 'xTotalHeapSize' [-Wunused-variable]
+ size_t xTotalHeapSize = configTOTAL_HEAP_SIZE;
+        ^~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:333:8: warning: unused variable 'uxAddress' [-Wunused-variable]
+ size_t uxAddress;
+        ^~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:332:10: warning: unused variable 'pucAlignedHeap' [-Wunused-variable]
+ uint8_t *pucAlignedHeap;
+          ^~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:331:14: warning: unused variable 'pxFirstFreeBlock' [-Wunused-variable]
+ BlockLink_t *pxFirstFreeBlock;
+              ^~~~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c: At top level:
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:83:13: warning: 'prvInsertBlockIntoFreeList' used but never defined
+ static void prvInsertBlockIntoFreeList( BlockLink_t *pxBlockToInsert );
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:377:13: warning: 'prvInsertBlockIntoFreeList' defined but not used [-Wunused-function]
+ static void prvInsertBlockIntoFreeList( BlockLink_t *pxBlockToInsert )
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:64:17: warning: 'ucHeap' defined but not used [-Wunused-variable]
+  static uint8_t ucHeap[ configTOTAL_HEAP_SIZE ];
+                 ^~~~~~
+../src/main.c: In function 'EXTI15_10_IRQHandler':
+../src/main.c:166:2: warning: implicit declaration of function 'btn_handler'; did you mean 'btn_task_handler'? [-Wimplicit-function-declaration]
+  btn_handler(NULL);
+  ^~~~~~~~~~~
+  btn_task_handler
+Third-Party/FreeRTOS/org/Source/portable/MemMang/subdir.mk:18: recipe for target 'Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/main.c
+ 
+
+16:18:45 Build Finished (took 779ms)
+
