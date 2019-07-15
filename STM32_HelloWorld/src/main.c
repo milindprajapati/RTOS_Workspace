@@ -1,12 +1,13 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Ac6
+  * @author  Milind Prajapati
   * @version V1.0
-  * @date    01-December-2013
+  * @date    12/01/2018
   * @brief   Default main function.
   ******************************************************************************
 */
+
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>

@@ -1724,7 +1724,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x89 StdPeriph_Driver/src/stm32f30x_hrtim.o
  .debug_macro   0x00000000       0x35 StdPeriph_Driver/src/stm32f30x_hrtim.o
  .debug_macro   0x00000000     0x13d0 StdPeriph_Driver/src/stm32f30x_hrtim.o
- .debug_line    0x00000000     0x1161 StdPeriph_Driver/src/stm32f30x_hrtim.o
+ .debug_line    0x00000000     0x1162 StdPeriph_Driver/src/stm32f30x_hrtim.o
  .debug_str     0x00000000    0x71564 StdPeriph_Driver/src/stm32f30x_hrtim.o
  .comment       0x00000000       0x80 StdPeriph_Driver/src/stm32f30x_hrtim.o
  .debug_frame   0x00000000      0xbbc StdPeriph_Driver/src/stm32f30x_hrtim.o
