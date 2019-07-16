@@ -1,25 +1,34 @@
-17:07:37 **** Incremental Build of configuration Debug for project STM32_LedButton_TaskNotify ****
+14:43:44 **** Incremental Build of configuration Debug for project STM32_LedButton_TaskNDelete ****
 make -j8 all 
-Building file: ../Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c
+Building file: ../src/main.c
 Invoking: MCU GCC Compiler
-D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskNotify\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/FreeRTOS/org/Source/portable/MemMang" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/SEGGER/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/SEGGER/OS" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/Third-Party/SEGGER/SEGGER" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.d" -MT"Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.o" -o "Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.o" "../Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c"
-Finished building: ../Third-Party/SEGGER/SEGGER/SEGGER_SYSVIEW.c
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskNDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'vTask1_handler':
+../src/main.c:70:3: warning: implicit declaration of function 'GPIO_ToggleBits'; did you mean 'GPIO_WriteBit'? [-Wimplicit-function-declaration]
+   GPIO_ToggleBits(GPIOB,GPIO_Pin_13);
+   ^~~~~~~~~~~~~~~
+   GPIO_WriteBit
+../src/main.c: In function 'vTask2_handler':
+../src/main.c:77:13: warning: unused variable 'current_tick' [-Wunused-variable]
+  TickType_t current_tick =0 ;
+             ^~~~~~~~~~~~
+Finished building: ../src/main.c
  
-Building target: STM32_LedButton_TaskNotify.elf
+Building target: STM32_LedButton_TaskNDelete.elf
 Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNotify/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_LedButton_TaskNotify.elf" @"objects.list"   -lm
-Finished building target: STM32_LedButton_TaskNotify.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskNDelete/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_LedButton_TaskNDelete.elf" @"objects.list"   -lm
+Finished building target: STM32_LedButton_TaskNDelete.elf
  
 make --no-print-directory post-build
 Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_LedButton_TaskNotify.elf" "STM32_LedButton_TaskNotify.bin"
-arm-none-eabi-size "STM32_LedButton_TaskNotify.elf"
+arm-none-eabi-objcopy -O binary "STM32_LedButton_TaskNDelete.elf" "STM32_LedButton_TaskNDelete.bin"
+arm-none-eabi-size "STM32_LedButton_TaskNDelete.elf"
    text	   data	    bss	    dec	    hex	filename
-  37988	   2564	  13832	  54384	   d470	STM32_LedButton_TaskNotify.elf
+   9936	   1152	   8300	  19388	   4bbc	STM32_LedButton_TaskNDelete.elf
  
-17:07:47 **** Programming project STM32_LedButton_TaskNotify on chip ****
-"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.4618086561390913255.cfg -s "D:\\Udemy\\RTOS\\RTOS_Workspace\\STM32_LedButton_TaskNotify" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_LedButton_TaskNotify.elf verify reset " -c shutdown 
+14:44:13 **** Programming project STM32_LedButton_TaskNDelete on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.550561874459754629.cfg -s "D:\\Udemy\\RTOS\\RTOS_Workspace\\STM32_LedButton_TaskNDelete" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_LedButton_TaskNDelete.elf verify reset " -c shutdown 
 Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -31,13 +40,13 @@ adapter_nsrst_delay: 100
 Info : clock speed 8000 kHz
 Info : STLINK v2.1 JTAG v34 API v2 M25 VID 0x0483 PID 0x374B
 Info : using stlink api v2
-Info : Target voltage: 3.250752
+Info : Target voltage: 3.257592
 Info : Unable to match requested speed 8000 kHz, using 4000 kHz
 Info : Stlink adapter speed set to 4000 kHz
 Info : STM32F302R8Tx.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : Listening on port 3333 for gdb connections
 target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x080042b8 msp: 0x20004000
+xPSR: 0x01000000 pc: 0x08002444 msp: 0x20004000
 Info : Unable to match requested speed 8000 kHz, using 4000 kHz
 Info : Stlink adapter speed set to 4000 kHz
 Info : Unable to match requested speed 8000 kHz, using 4000 kHz
@@ -48,14 +57,14 @@ Info : device id = 0x10016439
 Info : flash size = 64kbytes
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000003a msp: 0x20004000
-wrote 40960 bytes from file Debug/STM32_LedButton_TaskNotify.elf in 1.683566s (23.759 KiB/s)
+wrote 12288 bytes from file Debug/STM32_LedButton_TaskNDelete.elf in 0.590421s (20.324 KiB/s)
 ** Programming Finished **
 ** Verify Started **
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20004000
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x2000002e msp: 0x20004000
-verified 40612 bytes in 0.154587s (256.556 KiB/s)
+verified 11144 bytes in 0.101727s (106.981 KiB/s)
 ** Verified OK **
 ** Resetting Target **
 shutdown command invoked

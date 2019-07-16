@@ -1,0 +1,90 @@
+14:20:11 **** Incremental Build of configuration Debug for project STM32_LedButton_TaskDelete ****
+make -j8 all 
+Building file: ../src/main.c
+Building file: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
+Building file: ../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c
+Building file: ../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c
+Invoking: MCU GCC Compiler
+Building file: ../Third-Party/FreeRTOS/org/Source/croutine.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Building file: ../Third-Party/FreeRTOS/org/Source/event_groups.c
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.d" -MT"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" -o "Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" "../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c"
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.d" -MT"Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" -o "Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o" "../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c"
+Building file: ../Third-Party/FreeRTOS/org/Source/list.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.d" -MT"Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" -o "Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o" "../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/croutine.d" -MT"Third-Party/FreeRTOS/org/Source/croutine.o" -o "Third-Party/FreeRTOS/org/Source/croutine.o" "../Third-Party/FreeRTOS/org/Source/croutine.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+Invoking: MCU GCC Compiler
+Building file: ../Third-Party/FreeRTOS/org/Source/queue.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/event_groups.d" -MT"Third-Party/FreeRTOS/org/Source/event_groups.o" -o "Third-Party/FreeRTOS/org/Source/event_groups.o" "../Third-Party/FreeRTOS/org/Source/event_groups.c"
+Invoking: MCU GCC Compiler
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/list.d" -MT"Third-Party/FreeRTOS/org/Source/list.o" -o "Third-Party/FreeRTOS/org/Source/list.o" "../Third-Party/FreeRTOS/org/Source/list.c"
+D:\Udemy\RTOS\RTOS_Workspace\STM32_LedButton_TaskDelete\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F30 -DSTM32F302R8Tx -DNUCLEO_F302R8 -DDEBUG -DSTM32F302x8 -DUSE_STDPERIPH_DRIVER -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Utilities/STM32F3xx_Nucleo" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/StdPeriph_Driver/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/inc" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/device" -I"D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Third-Party/FreeRTOS/org/Source/queue.d" -MT"Third-Party/FreeRTOS/org/Source/queue.o" -o "Third-Party/FreeRTOS/org/Source/queue.o" "../Third-Party/FreeRTOS/org/Source/queue.c"
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.c:33:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/subdir.mk:18: recipe for target 'Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F/port.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.c:43:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Third-Party/FreeRTOS/org/Source/portable/MemMang/subdir.mk:18: recipe for target 'Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/portable/MemMang/heap_4.o] Error 1
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/croutine.c:28:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/event_groups.c:37:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/croutine.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/croutine.o] Error 1
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/list.c:30:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third-Party/FreeRTOS/org/Source/event_groups.o] Error 1
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/event_groups.o' failed
+make: *** [Third-Party/FreeRTOS/org/Source/list.o] Error 1
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/list.o' failed
+In file included from D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Third-Party/FreeRTOS/org/Source/include/FreeRTOS.h:56:0,
+                 from ../Third-Party/FreeRTOS/org/Source/queue.c:36:
+D:/Udemy/RTOS/RTOS_Workspace/STM32_LedButton_TaskDelete/Config/FreeRTOSConfig.h:148:10: fatal error: SEGGER_SYSVIEW_FreeRTOS.h: No such file or directory
+ #include "SEGGER_SYSVIEW_FreeRTOS.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third-Party/FreeRTOS/org/Source/queue.o] Error 1
+Third-Party/FreeRTOS/org/Source/subdir.mk:36: recipe for target 'Third-Party/FreeRTOS/org/Source/queue.o' failed
+Finished building: ../src/main.c
+ 
+Finished building: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
+ 
+
+14:20:12 Build Finished (took 1s.40ms)
+
