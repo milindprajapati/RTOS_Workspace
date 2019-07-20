@@ -21,11 +21,6 @@ TaskHandle_t xTaskHandle2=NULL;
 
 void vTask1_handler(void  *params);
 void vTask2_handler(void  *params);
-/*
-#ifdef USE_SEMIHOSTING
-	extern void initialise_monitor_handles();
-#endif
-*/
 
 static void prvSetupUart(void);
 static void prvSetupHardware(void);
@@ -169,6 +164,7 @@ static void prvSetupGPIO(void){
 	GPIO_Init(GPIOC, &btn_init);
 }
 static void prvSetupHardware(void){
+
 	//Uart Call
 	prvSetupGPIO();
 	prvSetupUart();
