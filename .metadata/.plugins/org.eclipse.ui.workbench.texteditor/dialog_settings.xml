@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="GPIO_Write" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
 			<item value="GPIO_Write"/>
+			<item value="GPIO"/>
+			<item value="xQueueSend("/>
+			<item value="xQueueSend()"/>
+			<item value="xQueueSend"/>
+			<item value="USART2_IRQHandler"/>
+			<item value="USART"/>
 			<item value="GPIO_Wrtie"/>
-			<item value="Toggle"/>
-			<item value="xTotalHeap"/>
-			<item value="vTaskNotify"/>
-			<item value="xPortSysTickHandler"/>
-			<item value="XportSys"/>
-			<item value="protsys"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="327" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-30|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="436" key="DIALOG_HEIGHT"/>
-		<item value="956" key="DIALOG_X_ORIGIN"/>
-		<item value="202" key="DIALOG_Y_ORIGIN"/>
+		<item value="-167" key="DIALOG_X_ORIGIN"/>
+		<item value="210" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -1,0 +1,7 @@
+00:59:25 **** Clean-only build of configuration Debug for project STM32_LedButton_QueueProcessing ****
+make -j8 clean 
+rm -rf *
+ 
+
+00:59:25 Build Finished (took 214ms)
+

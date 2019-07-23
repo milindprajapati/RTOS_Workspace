@@ -452,6 +452,7 @@ void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal)
   
   GPIOx->ODR = PortVal;
 }
+
 void GPIO_ToggleBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
 {
   /* Check the parameters */

@@ -1,0 +1,348 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Milind Prajapati
+  * @version V1.0
+  * @date    12/13/2018
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include "stm32f30x.h"
+#include "stm32f3xx_nucleo.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+
+#define FALSE 0
+#define TRUE 1
+#define OFF FALSE
+#define ON TRUE
+#define LED_ON_COMMAND 					1
+#define LED_OFF_COMMAND 				2
+#define LED_TOGGLE_COMMAND 				3
+#define LED_TOGGLE_STOP_COMMAND 		4
+#define LED_READ_STATUS_COMMAND 		5
+#define RTC_READ_DATE_TIME_COMMAND		6
+
+
+static void prvSetupGPIO(void);
+static void prvSetupUart(void);
+void printmsg(char  *msg);
+void rtos_delay(uint32_t delay_in_ms);
+static void prvSetupHardware(void);
+void getArguments(uint8_t *buffer);
+uint8_t getCommandCode(uint8_t *buffer);
+
+//Task Prototypes
+void vTask1_menu_display(void *params);
+void vTask2_cmd_handling(void *params);
+void vTask3_cmd_processing(void *params);
+void vTask4_uart_write(void *params);
+
+//Task Handlers
+TaskHandle_t xTaskHandle1=NULL;
+TaskHandle_t xTaskHandle2=NULL;
+TaskHandle_t xTaskHandle3=NULL;
+TaskHandle_t xTaskHandle4=NULL;
+
+//Queue handle
+QueueHandle_t command_queue=NULL;
+QueueHandle_t uart_write_queue = NULL;
+
+//Global Variables
+char usr_msg[250]={0};
+uint8_t command_buffer[20];
+uint8_t command_len =0;
+
+//CMD Struct
+typedef struct APP_CMD
+{
+	uint8_t COMMAND_NUM;
+	uint8_t COMMAND_ARGS[10];
+}APP_CMD_t;
+
+
+//Menu Definition
+char menu[]={"\
+\r\nLED_ON             ----> 1 \
+\r\nLED_OFF            ----> 2 \
+\r\nLED_TOGGLE         ----> 3 \
+\r\nLED_TOGGLE_OFF     ----> 4 \
+\r\nLED_READ_STATUS    ----> 5 \
+\r\nRTC_PRINT_DATETIME ----> 6 \
+\r\nEXIT_APP           ----> 0 \
+\r\nType your option here : "};
+
+//prototypes command helper functions
+void make_led_on(void);
+void make_led_off(void);
+void led_toggle_start(uint32_t duration);
+void led_toggle_stop(void);
+void read_led_status(char *task_msg);
+void read_rtc_info(char *task_msg);
+void print_error_message(char *task_msg);
+
+int main(void)
+{
+	DWT -> CTRL |= (1<<0);
+	RCC_DeInit();
+	SystemCoreClockUpdate();
+	prvSetupHardware();
+
+	sprintf(usr_msg,"\r\nThis is Queue Command Processing Demo\r\n");
+	printmsg(usr_msg);
+	command_queue = xQueueCreate(10,sizeof(APP_CMD_t*));
+	uart_write_queue = xQueueCreate(10,sizeof(char*));
+
+	if((command_queue != NULL)&& (uart_write_queue != NULL))
+	{
+		xTaskCreate(vTask1_menu_display,"TASK1-MENU",300,NULL,1,&xTaskHandle1);
+		xTaskCreate(vTask2_cmd_handling,"TASK2-CMD-HANDLING",500,NULL,1,&xTaskHandle2);
+		xTaskCreate(vTask3_cmd_processing,"TASK3-CMD-PROCESS",500,NULL,1,&xTaskHandle3);
+		xTaskCreate(vTask4_uart_write,"TASK4-UART-WRITE",200,NULL,1,&xTaskHandle4);
+		vTaskStartScheduler();
+	}else{
+		sprintf(usr_msg,"Queue creation failed\r\n");
+		printmsg(usr_msg);
+	}
+
+	for(;;);
+}
+
+//=================TaskHandlerDefinition============
+void vTask1_menu_display(void *params){
+
+	char *pData = menu;
+	while(1){
+		xQueueSend(uart_write_queue,&pData,portMAX_DELAY);
+		xTaskNotifyWait(0,0,NULL,portMAX_DELAY);
+	}
+}
+
+void vTask2_cmd_handling(void *params){
+	uint8_t command_code=0;
+
+	APP_CMD_t *new_cmd;
+	while(1)
+	{
+		xTaskNotifyWait(0,0,NULL,portMAX_DELAY);
+		command_code = getCommandCode(command_buffer);
+		new_cmd = (APP_CMD_t*) pvPortMalloc(sizeof(APP_CMD_t));
+		new_cmd->COMMAND_NUM = command_code;
+		getArguments(new_cmd->COMMAND_ARGS);
+		xQueueSend(command_queue,&new_cmd,portMAX_DELAY);
+	}
+}
+void vTask3_cmd_processing(void *params){
+	APP_CMD_t *new_cmd;
+	char task_msg[50];
+
+	uint32_t toggle_duration = pdMS_TO_TICKS(500);
+	while(1){
+		xQueueReceive(command_queue,(void*)&new_cmd,portMAX_DELAY);
+		if(new_cmd->COMMAND_NUM == LED_ON_COMMAND){
+			make_led_on();
+		}
+		else if(new_cmd->COMMAND_NUM == LED_OFF_COMMAND){
+			make_led_off();
+		}
+		else if(new_cmd->COMMAND_NUM == LED_TOGGLE_COMMAND)
+		{
+			led_toggle_start(toggle_duration);
+		}
+		else if(new_cmd->COMMAND_NUM == LED_TOGGLE_STOP_COMMAND)
+		{
+			led_toggle_stop();
+		}
+		else if(new_cmd->COMMAND_NUM == LED_READ_STATUS_COMMAND)
+		{
+			read_led_status(task_msg);
+		}
+		else if(new_cmd->COMMAND_NUM == RTC_READ_DATE_TIME_COMMAND )
+		{
+			read_rtc_info(task_msg);
+		}else
+		{
+			print_error_message(task_msg);
+		}
+		vPortFree(new_cmd);
+
+	}
+}
+
+void vTask4_uart_write(void *params){
+	char *pData = NULL;
+	while(1){
+		xQueueReceive(uart_write_queue,&pData,portMAX_DELAY);
+		printmsg(pData);
+	}
+}
+
+//==================================================
+
+uint8_t getCommandCode(uint8_t *buffer){
+	return buffer[0]-48;
+}
+void getArguments(uint8_t *buffer){
+
+}
+
+void printmsg(char  *msg){
+	for(uint32_t i=0;i<strlen(msg);i++){
+		while(USART_GetFlagStatus(USART2, USART_FLAG_TXE)!=SET);
+		USART_SendData(USART2, msg[i]);
+	}
+	while ( USART_GetFlagStatus(USART2,USART_FLAG_TC) != SET);
+}
+
+static void prvSetupUart(void){
+
+	GPIO_InitTypeDef gpio_uart_pins;
+	USART_InitTypeDef uart2_init;
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2,ENABLE);
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+
+	memset(&gpio_uart_pins,0,sizeof(gpio_uart_pins));
+	gpio_uart_pins.GPIO_Pin = GPIO_Pin_2| GPIO_Pin_3;
+	gpio_uart_pins.GPIO_Mode = GPIO_Mode_AF;
+	gpio_uart_pins.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(GPIOA, &gpio_uart_pins);
+
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_7);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_7);
+
+	memset(&uart2_init,0,sizeof(uart2_init));
+	uart2_init.USART_BaudRate = 115200;
+	uart2_init.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+	uart2_init.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+	uart2_init.USART_Parity = USART_Parity_No;
+	uart2_init.USART_StopBits = USART_StopBits_1;
+	uart2_init.USART_WordLength = USART_WordLength_8b;
+	USART_Init(USART2,&uart2_init);
+
+	//lets enable the UART byte reception interrupt in the microcontroller
+	USART_ITConfig(USART2,USART_IT_RXNE,ENABLE);
+
+	//lets set the priority in NVIC for the UART2 interrupt
+	NVIC_SetPriority(USART2_IRQn,5);
+
+	//enable the UART2 IRQ in the NVIC
+	NVIC_EnableIRQ(USART2_IRQn);
+
+	USART_Cmd(USART2, ENABLE);
+}
+
+void USART2_IRQHandler(void)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	uint16_t data_byte;
+	if( USART_GetFlagStatus(USART2,USART_FLAG_RXNE)){
+		data_byte = USART_ReceiveData(USART2);
+		command_buffer[command_len++] = (data_byte & 0xFF) ;
+
+		if(data_byte == '\r'){
+		xTaskNotifyFromISR(xTaskHandle2,0,eNoAction,&xHigherPriorityTaskWoken);
+		xTaskNotifyFromISR(xTaskHandle1,0,eNoAction,&xHigherPriorityTaskWoken);
+		}
+	}
+	if(xHigherPriorityTaskWoken){
+				taskYIELD();
+			}
+}
+
+static void prvSetupGPIO(void){
+
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+
+	GPIO_InitTypeDef led_init,btn_init;
+
+	led_init.GPIO_Mode =  GPIO_Mode_OUT;
+	led_init.GPIO_OType = GPIO_OType_PP;
+	led_init.GPIO_Pin = GPIO_Pin_13;
+	led_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	led_init.GPIO_Speed = GPIO_Speed_Level_2;
+	GPIO_Init(GPIOB, &led_init);
+
+	btn_init.GPIO_Mode =  GPIO_Mode_IN;
+	btn_init.GPIO_OType = GPIO_OType_PP;
+	btn_init.GPIO_Pin = GPIO_Pin_13;
+	btn_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	btn_init.GPIO_Speed = GPIO_Speed_Level_2;
+	GPIO_Init(GPIOC, &btn_init);
+
+
+}
+
+void rtos_delay(uint32_t delay_in_ms)
+{
+	uint32_t current_tick_count = xTaskGetTickCount();
+
+	uint32_t delay_in_ticks = (delay_in_ms * configTICK_RATE_HZ ) /1000 ;
+
+	while(xTaskGetTickCount() <  (current_tick_count + delay_in_ticks));
+
+}
+static void prvSetupHardware(void){
+	//Uart Call
+	prvSetupGPIO();
+	prvSetupUart();
+
+}
+
+void make_led_on(void)
+{
+	GPIO_WriteBit(GPIOB,GPIO_Pin_13,Bit_SET);
+}
+
+
+void make_led_off(void)
+{
+	GPIO_WriteBit(GPIOB,GPIO_Pin_13,Bit_RESET);
+}
+
+
+
+void led_toggle(TimerHandle_t xTimer)
+{
+	GPIO_ToggleBits(GPIOB,GPIO_Pin_13);
+}
+
+void led_toggle_start(uint32_t duration)
+{
+
+
+}
+
+
+void led_toggle_stop(void)
+{
+
+}
+
+
+void read_led_status(char *task_msg)
+{
+	sprintf(task_msg , "\r\nLED status is : %d\r\n", GPIO_ReadOutputDataBit(GPIOB,GPIO_Pin_13));
+	xQueueSend(uart_write_queue,&task_msg,portMAX_DELAY);
+}
+
+
+void read_rtc_info(char *task_msg)
+{
+
+}
+
+
+void print_error_message(char *task_msg)
+{
+	sprintf( task_msg,"\r\nInvalid command received\r\n");
+	xQueueSend(uart_write_queue,&task_msg,portMAX_DELAY);
+}
+

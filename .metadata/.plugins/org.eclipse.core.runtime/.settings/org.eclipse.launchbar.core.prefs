@@ -1,8 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton Run,org.eclipse.launchbar.core.descriptorType.default\:STM32_HelloWorld Debug,org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton_Interrupt.elf,org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton_Interrupt Run
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton Run,org.eclipse.launchbar.core.descriptorType.default\:STM32_HelloWorld Debug,org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton_Interrupt.elf,org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton_Interrupt Run,org.eclipse.launchbar.core.descriptorType.default\:STM32_QueueProccessing Debug
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:STM32_HelloWorld\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:STM32_HelloWorld\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton\ Run/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:STM32_LedButton_Interrupt\ Run/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:STM32_QueueProccessing\ Debug/activeLaunchMode=run
